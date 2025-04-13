@@ -23,7 +23,7 @@ private:
 
 public:
     Philosopher(int id) : id(id), left_fork(id), right_fork((id + 1) % NUM_PHILOSOPHERS) {
-        if (gen() % 2 == 0) swap(left_fork, right_fork);
+        if (id % 2 == 0) swap(left_fork, right_fork);
     }
 
     void think() {
